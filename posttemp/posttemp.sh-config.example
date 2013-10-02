@@ -1,0 +1,8 @@
+password=abcd123
+posturl=http://www.foobar.com/foo
+context1=outside
+context1usblocation=1-1.2.1.2
+context2=inside
+context2usblocation=1-1.2.2
+redirectlogscript=/ffp/home/admin/logrotate/redirectlog.src.sh
+logrotateifneeded=/ffp/home/admin/logrotate/logrotateifneeded.sh
