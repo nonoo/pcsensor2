@@ -239,14 +239,14 @@ int main(int argc, char **argv) {
 		libusb_exit(NULL);
 		return 1;
 	}
-	/*r = libusb_claim_interface(usbdevh, 1);
+	r = libusb_claim_interface(usbdevh, 1);
 	if (r < 0) {
 		fprintf(stderr, "error: can't claim interface 1\n");
 		libusb_release_interface(usbdevh, 0);
 		libusb_close(usbdevh);
 		libusb_exit(NULL);
 		return 1;
-	}*/
+	}
 	if (debug)
 		printf("device claimed\n");
 
@@ -259,7 +259,7 @@ int main(int argc, char **argv) {
 	}
 
 	libusb_release_interface(usbdevh, 0);
-	//libusb_release_interface(usbdevh, 1);
+	libusb_release_interface(usbdevh, 1);
 	libusb_close(usbdevh);
 	libusb_exit(NULL);
 
