@@ -9,6 +9,11 @@ logfile=$scriptdir/$scriptname.log
 source $scriptdir/$scriptname-config
 source $redirectlogscript
 
+if [ "$1" = "quiet" ]; then
+	quietmode=1
+	redirectlog
+fi
+
 currts=`date +%s`
 
 echo "reading $context1..."
@@ -33,4 +38,4 @@ if [ ! -z "$value" ]; then
 	curl -s "$posturl/posttemp.php?p=$password&c=$context2&t=$currts&v=$value"
 fi
 
-$logrotateifneeded $logfile
+checklogsize
