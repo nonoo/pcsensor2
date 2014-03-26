@@ -3,11 +3,10 @@
 # Linux sysfs USB structures: http://www.linux-usb.org/FAQ.html#i6
 
 scriptname=`basename $0`
-scriptdir=${0/$scriptname/}
-logfile=$scriptdir/$scriptname.log
+scriptdir=${0%$scriptname}
 
-source $scriptdir/$scriptname-config
-source $redirectlogscript
+. $scriptdir/$scriptname-config
+. $nlogrotatepath/redirectlog.src.sh
 
 if [ "$1" = "quiet" ]; then
 	quietmode=1
