@@ -6,5 +6,5 @@ context2=inside
 context2usblocation=1-1.2.2
 pcsensor2=$scriptdir/../pcsensor2
 
-logfile=/tmp/tmpfs/log/$scriptname.log
+logfile=/ffp/var/log/$scriptname.log
 nlogrotatepath=/ffp/home/admin/nlogrotate
